@@ -1,0 +1,26 @@
+/docker-compose.yml
+/composer.lock
+/symfony.lock
+
+/.env
+/.env.test
+/.env.local
+/.env.local.php
+/.env.*.local
+
+/config/secrets/prod/prod.decrypt.private.php
+/docker
+/public/bundles/
+/var/
+/vendor/
+
+###> squizlabs/php_codesniffer ###
+/.phpcs-cache
+/phpcs.xml
+###< squizlabs/php_codesniffer ###
+
+###> symfony/phpunit-bridge ###
+.phpunit
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###

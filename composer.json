@@ -1,0 +1,62 @@
+{
+    "name": "viachviach/exception-handler",
+    "type": "symfony-bundle",
+    "description": "This Bundle processes exceptions into json",
+    "keywords": ["exception", "json", "symfony", "handler"],
+    "license": "MIT",
+    "require": {
+        "php": "^7.4|^8.0",
+        "symfony/dotenv": "^5.2",
+        "symfony/flex": "^1.3.1",
+        "symfony/framework-bundle": "^5.2",
+        "symfony/serializer": "^5.2",
+        "symfony/yaml": "^5.2"
+    },
+    "require-dev": {
+        "psalm/plugin-symfony": "^1.4",
+        "phpstan/phpstan": "^0.12.33",
+        "slevomat/coding-standard": "^6.3",
+        "squizlabs/php_codesniffer": "^3.5",
+        "symfony/phpunit-bridge": "^5.2"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "CustomValidationBundle\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CustomValidationBundl\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "check": {
+            "codestyle": "@codestyle",
+            "static-analysis": "@static-analysis",
+            "tests": "@test"
+        },
+        "test": "@php vendor/bin/simple-phpunit",
+        "codestyle": "@php vendor/bin/phpcs",
+        "static-analysis": {
+            "phpstan": "@php vendor/bin/phpstan analyse -c phpstan.neon",
+            "psalm": "@php vendor/bin/psalm"
+        }
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "minimum-stability":  "dev",
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "^5.2"
+        }
+    }
+}
