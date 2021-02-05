@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace ExceptionHandler\Service;
 
 use ExceptionHandler\Handler\HandlerInterface;
-
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Throwable;
 
@@ -13,7 +12,7 @@ final class ExceptionHandler implements ExceptionHandlerInterface
 {
     /**
      * @var HandlerInterface[]
-    */
+     */
     private array $handlers;
 
     public function addHandler(HandlerInterface $handle): void

@@ -1,0 +1,7 @@
+services:
+  service.exception_handler:
+    class: ExceptionHandler\Service\ExceptionHandler
+
+  ExceptionHandler\Service\ExceptionHandlerInterface:
+    alias: service.exception_handler
+    public: true
