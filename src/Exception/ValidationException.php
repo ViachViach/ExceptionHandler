@@ -6,10 +6,10 @@ namespace ExceptionHandler\Exception;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-class NotFoundException extends AbstractException
+class ValidationException extends AbstractException
 {
     public function __construct(string $message = "")
     {
-        parent::__construct($message, JsonResponse::HTTP_NOT_FOUND);
+        parent::__construct($message, JsonResponse::HTTP_BAD_REQUEST);
     }
 }

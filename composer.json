@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "CustomValidationBundle\\": "src"
+            "ExceptionHandler\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "CustomValidationBundl\\Tests\\": "tests"
+            "ExceptionHandler\\Tests\\": "tests"
         }
     },
     "scripts": {

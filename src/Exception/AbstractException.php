@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CustomValidationBundle\Exception;
+namespace ExceptionHandler\Exception;
 
 use Exception;
 

@@ -1,14 +1,14 @@
 services:
   service.handler:
-    class: CustomValidationBundle\Service\Handler
+    class: ExceptionHandler\Service\Handler
     public: false
 
   service.exception_handler:
-    class: CustomValidationBundle\Service\ExceptionHandlerService
+    class: ExceptionHandler\Service\ExceptionHandlerService
     arguments:
       - '@service.handler'
     public: false
 
-  CustomValidationBundle\Service\ExceptionHandlerInterface:
+  ExceptionHandler\Service\ExceptionHandlerInterface:
     alias: service.exception_handler
     public: true

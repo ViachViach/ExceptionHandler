@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CustomValidationBundle\Service;
+namespace ExceptionHandler\Service;
 
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Throwable;
 
 interface ExceptionHandlerInterface
 {
-    public function handle(Throwable $e);
+    public function handle(Throwable $e): ?JsonResponse;
 }
