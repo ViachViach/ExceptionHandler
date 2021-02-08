@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ExceptionHandler\Exception;
+namespace ViachViach\ExceptionHandler\Exception;
 
 use Exception;
 

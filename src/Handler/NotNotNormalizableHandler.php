@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace ExceptionHandler\Handler;
+namespace ViachViach\ExceptionHandler\Handler;
 
-use ExceptionHandler\Exception\ValidationException;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Exception\NotNormalizableValueException;
 use Symfony\Component\Serializer\SerializerInterface;
 use Throwable;
+use ViachViach\ExceptionHandler\Exception\ValidationException;
 
 class NotNotNormalizableHandler implements HandlerInterface
 {

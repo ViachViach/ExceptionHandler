@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ExceptionHandler\Handler;
+namespace ViachViach\ExceptionHandler\Handler;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Throwable;

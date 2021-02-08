@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace ExceptionHandler\DependencyInjection\Compiler;
+namespace ViachViach\ExceptionHandler\DependencyInjection\Compiler;
 
-use ExceptionHandler\ExceptionHandlerBundle;
-use ExceptionHandler\Service\ExceptionHandler;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
+use ViachViach\ExceptionHandler\ExceptionHandlerBundle;
+use ViachViach\ExceptionHandler\Service\ExceptionHandler;
 
 class HandlerPass implements CompilerPassInterface
 {

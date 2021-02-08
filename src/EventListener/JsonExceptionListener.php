@@ -2,14 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ExceptionHandler\EventListener;
+namespace ViachViach\ExceptionHandler\EventListener;
 
-use ExceptionHandler\Service\ExceptionHandlerInterface;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Exception\NotNormalizableValueException;
-use Throwable;
+use ViachViach\ExceptionHandler\Service\ExceptionHandlerInterface;
 
 class JsonExceptionListener
 {

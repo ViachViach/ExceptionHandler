@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace ExceptionHandler\Service;
+namespace ViachViach\ExceptionHandler\Service;
 
-use ExceptionHandler\Handler\HandlerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Throwable;
+use ViachViach\ExceptionHandler\Handler\HandlerInterface;
 
 final class ExceptionHandler implements ExceptionHandlerInterface
 {

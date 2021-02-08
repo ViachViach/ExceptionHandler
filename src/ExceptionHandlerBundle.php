@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace ExceptionHandler;
+namespace ViachViach\ExceptionHandler;
 
-use ExceptionHandler\DependencyInjection\Compiler\HandlerPass;
-use ExceptionHandler\Handler\HandlerInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use ViachViach\ExceptionHandler\DependencyInjection\Compiler\HandlerPass;
+use ViachViach\ExceptionHandler\Handler\HandlerInterface;
 
 class ExceptionHandlerBundle extends Bundle
 {

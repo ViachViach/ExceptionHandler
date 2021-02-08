@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace ExceptionHandler\Handler;
+namespace ViachViach\ExceptionHandler\Handler;
 
-use ExceptionHandler\Exception\NotFoundException;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\SerializerInterface;
 use Throwable;
+use ViachViach\ExceptionHandler\Exception\NotFoundException;
 
 class NotFoundHandler implements HandlerInterface
 {
