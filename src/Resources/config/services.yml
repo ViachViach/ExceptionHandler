@@ -1,8 +1,8 @@
 services:
-  service.exception_handler:
+  ViachViach\ExceptionHandler\Service\ExceptionHandler:
     class: ViachViach\ExceptionHandler\Service\ExceptionHandler
     public: false
 
   ViachViach\ExceptionHandler\Service\ExceptionHandlerInterface:
-    alias: service.exception_handler
+    alias: ViachViach\ExceptionHandler\Service\ExceptionHandler
     public: true
