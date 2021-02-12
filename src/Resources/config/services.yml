@@ -3,7 +3,17 @@ services:
   ViachViach\ExceptionHandler\Handler\ExceptionHandler:
     class: ViachViach\ExceptionHandler\Handler\ExceptionHandler
     public: false
-    tags: exception.handler
+    tags: [ exception.handler ]
+
+  ViachViach\ExceptionHandler\Handler\NotFoundHandler:
+    class: ViachViach\ExceptionHandler\Handler\NotFoundHandler
+    public: false
+    tags: [ exception.handler ]
+
+  ViachViach\ExceptionHandler\Handler\NotNotNormalizableHandler:
+    class: ViachViach\ExceptionHandler\Handler\NotNotNormalizableHandler
+    public: false
+    tags: [ exception.handler ]
 
   ViachViach\ExceptionHandler\Service\ExceptionHandler:
     class: ViachViach\ExceptionHandler\Service\ExceptionHandler
