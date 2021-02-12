@@ -17,10 +17,7 @@ class ExceptionHandlerBundle extends Bundle
     {
         parent::build($container);
 
-        $container
-            ->registerForAutoconfiguration(HandlerInterface::class)
-            ->addTag(self::HANDLER_TAG);
-
+        $container->registerForAutoconfiguration(HandlerInterface::class)->addTag(self::HANDLER_TAG);
         $container->addCompilerPass(new HandlerPass());
     }
 }

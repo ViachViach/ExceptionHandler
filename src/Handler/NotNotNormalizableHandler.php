@@ -26,7 +26,7 @@ class NotNotNormalizableHandler implements HandlerInterface
             return null;
         }
 
-        $data = new ValidationException($exception->getMessage());
+        $data   = new ValidationException($exception->getMessage());
         $result = $this->serializer->serialize($data, JsonEncoder::FORMAT);
 
         return new JsonResponse($result, JsonResponse::HTTP_NOT_FOUND, [], true);
