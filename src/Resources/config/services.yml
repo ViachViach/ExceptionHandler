@@ -3,15 +3,6 @@ services:
     class: ViachViach\ExceptionHandler\Service\ExceptionHandler
     public: false
 
-  ViachViach\ExceptionHandler\Service\ExceptionHandler:
-    class: ViachViach\ExceptionHandler\Service\ExceptionHandler
-    public: false
-
   ViachViach\ExceptionHandler\Service\ExceptionHandlerInterface:
     alias: service.exception_handler
-    public: true
-
-  ViachViach\ExceptionHandler\EventListener\JsonExceptionListener:
-    arguments:
-      - '@ViachViach\ExceptionHandler\Service\ExceptionHandlerInterface'
     public: true
