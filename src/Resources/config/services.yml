@@ -2,16 +2,22 @@ services:
 
   ViachViach\ExceptionHandler\Handler\ExceptionHandler:
     class: ViachViach\ExceptionHandler\Handler\ExceptionHandler
+    arguments:
+      - '@serializer'
     public: false
     tags: [ exception.handler ]
 
   ViachViach\ExceptionHandler\Handler\NotFoundHandler:
     class: ViachViach\ExceptionHandler\Handler\NotFoundHandler
+    arguments:
+      - '@serializer'
     public: false
     tags: [ exception.handler ]
 
-  ViachViach\ExceptionHandler\Handler\NotNotNormalizableHandler:
-    class: ViachViach\ExceptionHandler\Handler\NotNotNormalizableHandler
+  ViachViach\ExceptionHandler\Handler\NormalizableHandler:
+    class: ViachViach\ExceptionHandler\Handler\NormalizableHandler
+    arguments:
+      - '@serializer'
     public: false
     tags: [ exception.handler ]
 

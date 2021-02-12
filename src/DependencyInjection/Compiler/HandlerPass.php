@@ -18,7 +18,6 @@ class HandlerPass implements CompilerPassInterface
         $definition = $container->findDefinition(ExceptionHandler::class);
         $handlers   = $container->findTaggedServiceIds(ExceptionHandlerBundle::HANDLER_TAG);
 
-        // phpcs:ignore SlevomatCodingStandard.Variables.UnusedVariable.UnusedVariable
         foreach ($handlers as $id => $tag) {
             $definition->addMethodCall('addHandler', [new Reference($id)]);
         }
