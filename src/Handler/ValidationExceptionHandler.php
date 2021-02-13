@@ -8,9 +8,9 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\SerializerInterface;
 use Throwable;
-use ViachViach\Storage\Exception\NotFoundException;
+use ViachViach\Storage\Exception\ValidationException;
 
-class NotFoundHandler implements HandlerInterface
+class ValidationExceptionHandler
 {
     private SerializerInterface $serializer;
 
@@ -21,12 +21,11 @@ class NotFoundHandler implements HandlerInterface
 
     public function handle(Throwable $exception): ?JsonResponse
     {
-        if (!$exception instanceof NotFoundException) {
+        // TODO ALL exeption with debug
+        if (!$exception instanceof ValidationException) {
             return null;
         }
-
-        $data = $this->serializer->serialize($exception, JsonEncoder::FORMAT);
-
-        return new JsonResponse($data, JsonResponse::HTTP_NOT_FOUND, [], true);
+        
+        return new JsonResponse($exception->getValidationInfo(), JsonResponse::HTTP_NOT_FOUND, [], true);
     }
 }
