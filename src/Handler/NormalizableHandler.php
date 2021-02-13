@@ -14,16 +14,18 @@ use ViachViach\Storage\DTO\ValidationExceptionInfo;
 class NormalizableHandler implements HandlerInterface
 {
     private SerializerInterface $serializer;
+    private ExceptionHandler $handler;
 
-    public function __construct(SerializerInterface $serializer)
+    public function __construct(SerializerInterface $serializer, ExceptionHandler $handler)
     {
         $this->serializer = $serializer;
+        $this->handler    = $handler;
     }
 
     public function handle(Throwable $exception): ?JsonResponse
     {
         if (!$exception instanceof NotNormalizableValueException) {
-            return null;
+            $this->handler->handle($exception);
         }
 
         $data = new ValidationExceptionInfo();

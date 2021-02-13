@@ -22,14 +22,6 @@ final class ExceptionHandler implements ExceptionHandlerInterface
 
     public function handle(Throwable $e): ?JsonResponse
     {
-        foreach ($this->handlers as $handler) {
-            $response = $handler->handle($e);
-
-            if ($response !== null) {
-                return $response;
-            }
-        }
-
-        return null;
+        return $handler->handle($e);
     }
 }
