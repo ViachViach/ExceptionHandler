@@ -21,10 +21,10 @@ class NotFoundHandler implements HandlerInterface
         $this->handler    = $handler;
     }
 
-    public function handle(Throwable $exception): ?JsonResponse
+    public function handle(Throwable $exception): JsonResponse
     {
         if (!$exception instanceof NotFoundException) {
-            $this->handler->handle($exception);
+            return $this->handler->handle($exception);
         }
 
         $data = $this->serializer->serialize($exception, JsonEncoder::FORMAT);

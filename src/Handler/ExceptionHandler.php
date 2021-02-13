@@ -18,7 +18,7 @@ class ExceptionHandler implements HandlerInterface
         $this->serializer = $serializer;
     }
 
-    public function handle(Throwable $exception): ?JsonResponse
+    public function handle(Throwable $exception): JsonResponse
     {
         $result = $this->serializer->serialize($exception, JsonEncoder::FORMAT);
 

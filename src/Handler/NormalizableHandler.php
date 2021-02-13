@@ -22,10 +22,10 @@ class NormalizableHandler implements HandlerInterface
         $this->handler    = $handler;
     }
 
-    public function handle(Throwable $exception): ?JsonResponse
+    public function handle(Throwable $exception): JsonResponse
     {
         if (!$exception instanceof NotNormalizableValueException) {
-            $this->handler->handle($exception);
+            return $this->handler->handle($exception);
         }
 
         $data = new ValidationExceptionInfo();
