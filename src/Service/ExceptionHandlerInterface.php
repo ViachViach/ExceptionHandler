@@ -9,5 +9,5 @@ use Throwable;
 
 interface ExceptionHandlerInterface
 {
-    public function handle(Throwable $e): ?JsonResponse;
+    public function handle(Throwable $e): void;
 }
